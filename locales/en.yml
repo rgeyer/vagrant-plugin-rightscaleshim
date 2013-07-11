@@ -1,0 +1,6 @@
+en:
+  vagrant:
+    config:
+      rightscaleshim:
+        shim_dir_missing: "Must specify a directory where vagrant-rightscaleshim will use for runtime persistence for the VM"
+        run_list_dir_missing: "Must specify a directory where chef solo json config files (used as runlists) can be found for the VM"

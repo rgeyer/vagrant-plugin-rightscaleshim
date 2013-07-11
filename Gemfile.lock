@@ -1,0 +1,31 @@
+PATH
+  remote: .
+  specs:
+    vagrant-rightscaleshim (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.4)
+    flexmock (0.9.0)
+    rake (10.1.0)
+    rspec (2.14.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.2)
+    rspec-expectations (2.14.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.1)
+    yard (0.8.6.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  flexmock (~> 0.9)
+  rake
+  rspec (~> 2.11)
+  vagrant-rightscaleshim!
+  yard (~> 0.8)
