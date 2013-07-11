@@ -13,6 +13,7 @@ Install the Vagrant RightScale Shim plugin
 ## Usage
 
 You can setup your vagrantfile thusly
+
     Vagrant.configure("2") do |config|
       config.vm.hostname = "centos"
 
