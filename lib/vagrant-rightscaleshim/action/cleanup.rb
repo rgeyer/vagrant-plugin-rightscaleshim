@@ -31,7 +31,7 @@ module VagrantPlugins
         def call(env)
           shim_dir = env[:machine].config.rightscaleshim.shim_dir
 
-          if shim_dir && File.directory?(shim_dir)
+          if shim_dir.instance_of?(::String) && File.directory?(shim_dir)
             FileUtils.rm_rf shim_dir
           end
 

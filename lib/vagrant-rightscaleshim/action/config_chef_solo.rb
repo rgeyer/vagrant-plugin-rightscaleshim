@@ -33,7 +33,7 @@ module VagrantPlugins
           run_list_dir = env[:machine].config.rightscaleshim.run_list_dir
           one_time_runlist_file = env[:machine].config.rightscaleshim.one_time_runlist_file
 
-          if shim_dir && !shim_dir.empty? && run_list_dir && !run_list_dir.empty?
+          if shim_dir && shim_dir.instance_of?(::String) && run_list_dir && run_list_dir.instance_of?(::String)
             node_js_file = File.join(Dir.pwd, shim_dir, 'node.js')
             dispatch_dir = File.join(Dir.pwd, shim_dir, 'dispatch')
             FileUtils.mkdir_p dispatch_dir unless File.directory? dispatch_dir

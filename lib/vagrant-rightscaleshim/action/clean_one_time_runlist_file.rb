@@ -31,7 +31,7 @@ module VagrantPlugins
         def call(env)
           one_time_runlist_file = env[:machine].config.rightscaleshim.one_time_runlist_file
 
-          if one_time_runlist_file && File.exists?(one_time_runlist_file)
+          if one_time_runlist_file.instance_of?(::String) && File.exists?(one_time_runlist_file)
             FileUtils.rm one_time_runlist_file
           end
 
