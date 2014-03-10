@@ -19,6 +19,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+require 'i18n'
 require 'vagrant-rightscaleshim/plugin'
 require 'vagrant-rightscaleshim/action/cleanup'
 require 'vagrant-rightscaleshim/action/config_chef_solo'

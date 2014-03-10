@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name = "vagrant-rightscaleshim"
-  gem.version = "1.0.1"
+  gem.version = "1.0.2"
   gem.homepage = "https://github.com/rgeyer/vagrant-plugin-rightscaleshime"
   gem.license = "MIT"
   gem.summary = %Q{Allows RightScale ServerTemplate development to be performed primarily within Vagrant}

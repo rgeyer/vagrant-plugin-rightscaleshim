@@ -42,14 +42,19 @@ module VagrantPlugins
 
       # TODO: Better error handling, verify shim dir and runlist dir exist, catch json errors when parsing runlists
       def validate(machine)
+        misconfigured = false
         errors = _detected_errors
         if !machine.config.rightscaleshim.shim_dir || machine.config.rightscaleshim.shim_dir.empty?
-          errors << I18.t("vagrant.config.rightscaleshim.shim_dir_missing")
+          machine.ui.warn(I18n.t("vagrant.config.rightscaleshim.shim_dir_missing"))
+          misconfigured = true
         end
 
         if !machine.config.rightscaleshim.run_list_dir || machine.config.rightscaleshim.run_list_dir.empty?
-          errors << I18n.t("vagrant.config.rightscaleshim.run_list_dir_missing")
+          machine.ui.warn(I18n.t("vagrant.config.rightscaleshim.run_list_dir_missing"))
+          misconfigured
         end
+
+        machine.ui.warn(I18n.t("vagrant.config.rightscaleshim.misconfigured"))
 
         {'rightscaleshim' => errors}
       end

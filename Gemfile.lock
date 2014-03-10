@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vagrant-rightscaleshim (1.0.1)
+    vagrant-rightscaleshim (1.0.2)
 
 GEM
   remote: https://rubygems.org/
